@@ -1,81 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
+    <meta charset="UTF-8" />    
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Warung Sangu</title>
+    <meta name="theme-color" content="#db0000"/>
+    <link rel="apple-touch-icon" href="/icons/android-icon-192x192.png">
+    <link rel="manifest" href="manifest.json">    
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon.ico">
     <link
       href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Unica+One&display=swap"
       rel="stylesheet"
+      crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css"
-    />
+    <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
+    <title>Warung Sangu</title>    
   </head>
   <body>
-    <a href="#content" class="skip-link">Main Content</a>
-    <header class="hero">
-      <nav class="nav">
-        <div class="menu-hp">
-          <div>
-            <a href="/" class="logo-font">
-              Warung Sangu
-            </a>
-          </div>
-          <div class="menu-container">
-            <button
-              aria-label="button menu dropdown on mobile"
-              class="menu"
-              type="button"
-            >
-              <span class="fa fa-caret-down"></span>
-            </button>
-          </div>
-        </div>
+    <a href="#container" class="skip-link">Main Content</a>    
+    <app-bar></app-bar>          
 
-        <ul class="nav-list">
-          <li class="nav-item"><a href="/">Home</a></li>
-          <li class="nav-item"><a href="#">Favorite</a></li>
-          <li class="nav-item">
-            <a
-              href="https://github.com/magusabdul"
-              target="_blank"
-              rel="noopener noreferrer"
-              >About Us</a
-            >
-          </li>          
-        </ul>
-      </nav>
-
-      <div tabindex="0" class="hero__inner">
-        <h1 class="hero__title">
-          Warung Sangu
-          <span class="hero-bold">is Very Good</span>
-        </h1>
-        <p class="hero__tagline">
-          Sebuah makanan yang baik dan lezat dibuat oleh Restoran terbaik!
-        </p>
-        <a href="#content" class="btn">Explore!</a>
-      </div>
-    </header>
-
-    <main id="content">
-      <section class="content">
-          <div class="latest" tabindex="0">
-              <h2 tabindex="0">Restoran the Explorer</h2>
-              <div class="list" id="list-food"></div>
-          </div>
-      </section>
-    </main>
-
-    <footer tabindex="0">
-      <ul>
-        <li>Copyright &copy; 2021 - Warung Sangu</li>                
-        <li><img src="/images/logo.png" alt="logo warung sangu"></li>
-      </ul>        
-    </footer>
+    <main id="main-content"></main>
+    
+    <footer-app></footer-app>    
   </body>
 </html>

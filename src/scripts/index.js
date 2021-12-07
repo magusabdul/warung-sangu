@@ -1,30 +1,27 @@
-import "regenerator-runtime"; /* for async await transpile */
-import "../styles/main.css";
-import "../styles/responsive.css";
+import 'regenerator-runtime'; /* for async await transpile */
+import '../styles/main.css';
+import '../styles/responsive.css';
+import '../styles/form.css';
+import '../styles/spinner.css';
+import './components/app-bar';
+import './components/footer-app';
+import App from './views/app';
+import swRegister from './utils/sw-register';
+import WebSocketInitiator from './utils/websocket-initiator';
+import CONFIG from './globals/config';
 
-import ('../DATA.json').then(({default: jsonData}) => {
-    console.log(jsonData)
-    let datas = jsonData['restaurants']
-    let dataList = '';
-    datas.forEach(function(data) {
-        dataList +=`
-        <div class="list_item" tabindex="0">
-            <img class="list_item_thumb" src="${data['pictureId']}" alt="Gambar Restoran ${data['name']}" title="${data['name']}">
-            <div class="city">${data['city']}</div>
-            <div class="list_item_content">
-                <p class="list_item_rating">
-                    Rating : ${data['rating']}
-                </p>
-                <h3 class="list_item_title"><a href="#">${data['name']}</a></h3>
-                <div class="list_item_desc" tabindex="0">${data['description'].slice(0, 150)}...</div>
-            </div>
-        </div>
-        `;
-    });
-    document.querySelector('#list-food').innerHTML = dataList;  
+const app = new App({
+  button: document.querySelector('#hamburgerButton'),
+  drawer: document.querySelector('#navigationDrawer'),
+  content: document.querySelector('#main-content'),
 });
 
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
 
-document.querySelector(".menu").addEventListener("click", function () {
-  document.querySelector(".nav-list").classList.toggle("nav-list-block");
+window.addEventListener('load', () => {
+  app.renderPage();
+  swRegister();
+  WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
 });
