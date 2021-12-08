@@ -12,5 +12,7 @@
         "sourceType": "module"
     },
     "rules": {
-    }
+        "no-console": "off",
+        "no-restricted-globals": ["error", "event", "fdescribe"]
+    }    
 }

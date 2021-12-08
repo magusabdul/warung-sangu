@@ -7,7 +7,7 @@ class FooterApp extends HTMLElement {
     this.innerHTML = `
       <footer tabindex="0">
       <p>Copyright &copy; 2021 - Warung Sangu</p>      
-      <p>By : <a href="magusabdul@gmail.com">Agus Abdul Malik</a></p>
+      <p>By : Agus Abdul Malik</p>
      </footer>
       `;
   }

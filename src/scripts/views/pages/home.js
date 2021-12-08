@@ -42,7 +42,7 @@ const Home = {
     } catch (err) {
       main.style.display = 'block';
       loading.style.display = 'none';
-      listContainer.innerHTML = `Error: ${err}, swipe up to refresh!`;
+      listContainer.innerHTML = `Error: ${err}, refresh your this web!`;
     }
   },
 };

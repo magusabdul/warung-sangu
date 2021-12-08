@@ -37,7 +37,7 @@ const restaurantDetailTemplate = (detail) => `
       <li><span><b>Alamat</b> : &emsp;${detail.address}, ${
   detail.city
 }</span></li>
-      <li><span>Rating <i title="ratings" class="fa fa-star"></i> : &emsp;${detail.rating}</span></li>
+      <li><span>Rating : &emsp;<i title="ratings" class="fa fa-star"></i>${detail.rating}</span></li>
       <li><p class="truncate2"><b>Description</b> : ${detail.description}</p></li>
       <li><b>Kategori Makanan</b> : &emsp; ${detail.categories
     .map(

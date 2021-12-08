@@ -8,7 +8,7 @@
   );
   --box-shadow: rgba(0, 0, 0, 0.2);
   --btn: var(--secondary-color);
-  --btn-hover: rgb(0, 209, 105);
+  --btn-hover: rgb(4, 228, 116);
 }
 
 * {
@@ -95,7 +95,7 @@ body {
 .app-bar .app-bar__menu button {
   background-color: transparent;
   border: none;
-  font-size: 18px;
+  font-size: 26px;
   padding: 8px;
   cursor: pointer;
   color: var(--primary-color);
@@ -109,15 +109,15 @@ body {
 .app-bar .app-bar__brand h1 {
   color: var(--primary-color);
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: xx-large;
   user-select: none;
 }
 
 .app-bar .app-bar__navigation {
   position: absolute;
   top: 50px;
-  left: -180px;
-  width: 150px;
+  left: -100%;
+  width: 100%;
   transition: all 0.3s;
   padding: 8px;
   background-color: var(--secondary-color);
@@ -135,12 +135,8 @@ body {
   padding: 8px;
   margin-bottom: 5px;
   width: 100%;
-}
-
-.app-bar__navigation a::selection{
-  font-size: medium;
-  color: var(--btn-hover);
-  border-bottom: 1px solid var(--btn-hover);
+  font-size: xx-large;
+  font-weight: 800px;
 }
 
 /*
@@ -244,11 +240,6 @@ main {
   width: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(
-    71.9deg,
-    rgba(53, 76, 98, 0.71) -3.77%,
-    rgba(158, 43, 43, 0.37) 92.46%
-  );
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
 }
@@ -262,12 +253,12 @@ main {
 }
 
 .img-res-detail {
-  object-fit: cover;
+  object-fit: none;
   height: 100%;
   width: 100%;
+  position: relative;
   border-radius: 10px;
-  box-shadow: 1px 4px 8px 2px var(--box-shadow);
-  transition: 0.7s;
+  box-shadow: 12px 12px 2px 1px var(--box-shadow);
   border: 1em solid var(--secondary-color);
 }
 
@@ -294,6 +285,7 @@ main {
 }
 
 .truncate2 {
+  color: black;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -441,19 +433,15 @@ main {
 footer {
   min-height: 75px;
   padding: 18px;
-  background-color: white;
+  background-color: var(--secondary-color);
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);  
 }
  
 footer p {
   text-align: center;
-  color: #aaaaaa;
+  color: #e6e3e3;
   padding: 2px;
-}
- 
-footer p a {
-  color: #db0000;
-  text-decoration: none;
+  font-size: medium;
 }
 
 /* Button */
@@ -488,7 +476,7 @@ footer p a {
   vertical-align: middle;
   background-color: var(--btn);
   border: 1px solid transparent;
-  font-size: medium;
+  font-size: x-large;
   border-radius: 0.276em;
   cursor: pointer;
   text-decoration: none;
@@ -519,7 +507,7 @@ footer p a {
   position: fixed;
   bottom: 16px;
   right: 16px;
-  background-color: #db0000;
+  background-color: var(--secondary-color);
   color: white;
   border: 0;
   border-radius: 50%;
