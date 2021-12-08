@@ -5,22 +5,14 @@ import Spinner from '../templates/spinner-html';
 const Home = {
   async render() {
     return `
-      <div class="hero">
-      <div tabindex="0" class="hero__inner">
-        <h1 class="hero__title">Warung Sangu</h1>
-        <p class="hero__tagline">
-          Sebuah makanan yang baik dan lezat dibuat oleh Restoran terbaik!
-        </p>
-        <a href="#container" class="btn-content">Start now!</a>
-      </div>
-    </div>
-      <div class="container" id="container">
+      <hero-app></hero-app>                  
+      <div class="container" id="container" tabindex="0">        
       <div id="loading"></div>
-      <div class="main">
-        <h2 class="title-container">List Restaurant</h2>
-        <section id="list-rest"></section>
+        <div class="main">
+          <h2 class="title-container">List Restaurant</h2>
+          <section id="list-rest"></section>
+        </div>
       </div>
-    </div>
       `;
   },
 
@@ -42,7 +34,7 @@ const Home = {
     } catch (err) {
       main.style.display = 'block';
       loading.style.display = 'none';
-      listContainer.innerHTML = `Error: ${err}, refresh your this web!`;
+      listContainer.innerHTML = `Error: ${err}, refresh this web!`;
     }
   },
 };

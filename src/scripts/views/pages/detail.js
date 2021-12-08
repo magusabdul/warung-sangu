@@ -8,8 +8,8 @@ import FavoriteRestoIdb from '../../data/favorite-resto-idb';
 
 const Detail = {
   async render() {
-    return `
-      <div class="container">
+    return `    
+      <div class="container" id="container" tabindex="0">
       <div id="loading"></div>
       <div class="main">
         <h2 class="title-container">Detail Restaurant</h2>
@@ -55,7 +55,7 @@ const Detail = {
       main.style.display = 'block';
       loading.style.display = 'none';
     } catch (err) {
-      detailContainer.innerHTML = `Error: ${err}, swipe up to refresh!`;
+      detailContainer.innerHTML = `Error: ${err}, refresh this web!`;
       main.style.display = 'block';
       loading.style.display = 'none';
     }

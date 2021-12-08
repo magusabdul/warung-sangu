@@ -95,7 +95,7 @@ body {
 .app-bar .app-bar__menu button {
   background-color: transparent;
   border: none;
-  font-size: 26px;
+  font-size: 32px;
   padding: 8px;
   cursor: pointer;
   color: var(--primary-color);

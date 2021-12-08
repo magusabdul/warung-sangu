@@ -4,6 +4,7 @@ import '../styles/responsive.css';
 import '../styles/form.css';
 import '../styles/spinner.css';
 import './components/app-bar';
+import './components/hero-app';
 import './components/footer-app';
 import App from './views/app';
 import swRegister from './utils/sw-register';

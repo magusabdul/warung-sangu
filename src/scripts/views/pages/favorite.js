@@ -4,14 +4,13 @@ import { restaurantItemTemplate } from '../templates/template-html';
 const Favorite = {
   async render() {
     return `
+      <div class="container" id="container" tabindex="0">        
+        <div id="loading"></div>
+        <div class="main">
+          <h2 class="title-container">Your Favorite Restaurant</h2>
+          <section id="list-rest"></section>
+        </div>
       </div>
-      <div class="container">
-      <div id="loading"></div>
-      <div class="main">
-        <h2 class="title-container">List Restaurant</h2>
-        <section id="list-rest"></section>
-      </div>
-    </div>
       `;
   },
 
