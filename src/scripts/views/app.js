@@ -24,10 +24,10 @@ class App {
     const page = routes[url];
     this.initiator_content.innerHTML = await page.render();
     await page.afterRender();
-    const skipLinkElem = document.querySelector('.skip-link');    
-    skipLinkElem.addEventListener('click', (event) => {      
-        event.preventDefault();
-        document.querySelector('#container').focus();
+    const skipLinkElem = document.querySelector('.skip-link');
+    skipLinkElem.addEventListener('click', (event) => {
+      event.preventDefault();
+      document.querySelector('#container').focus();
     });
   }
 }

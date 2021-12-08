@@ -1,10 +1,10 @@
 class HeroApp extends HTMLElement {
-    connectedCallback() {
-        this.render();
-    }
+  connectedCallback() {
+    this.render();
+  }
 
-    render() {
-        this.innerHTML = `
+  render() {
+    this.innerHTML = `
             <div class="hero">
                 <div tabindex="0" class="hero__inner">
                     <h1 class="hero__title">Warung Sangu</h1>
@@ -15,7 +15,7 @@ class HeroApp extends HTMLElement {
                 </div>
             </div>
         `;
-    }
+  }
 }
 
 customElements.define('hero-app', HeroApp);
