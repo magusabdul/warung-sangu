@@ -1,5 +1,4 @@
 import API_ENDPOINT from '../globals/api-endpoint';
-import CONFIG from '../globals/config';
 
 class RestoDbSource {
   static async listResto() {
@@ -16,7 +15,7 @@ class RestoDbSource {
     const rawResponse = await fetch(API_ENDPOINT.POST_REVIEW, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',        
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
     });
