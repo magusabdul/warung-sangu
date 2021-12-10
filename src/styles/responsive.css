@@ -42,7 +42,7 @@
   }
    
   .app-bar .app-bar__brand h1 {
-    font-size: large;
+    font-size: 35px;
   }
    
   .app-bar .app-bar__menu {
@@ -59,13 +59,13 @@
   }
   .app-bar .app-bar__navigation ul li a {
     display: inline-block;
-    width: 120px;
+    width: 140px;
     text-align: center;
     margin: 0;
-    font-size: larger;
+    font-size: 25px;
   }
   .app-bar .app-bar__navigation ul li a:hover{
-    font-size: large;
+    font-size: xx-large;
     color: var(--btn-hover);
     border-bottom: 1px solid var(--btn-hover);
   }
@@ -74,7 +74,7 @@
 @media only screen and (min-width: 768px) {
   .detail {
     grid-template-columns: 1.1fr 1fr;
-    justify-content: center;
+    justify-content: xx-center;
   }
   
   .detail h3 {
