@@ -7,7 +7,7 @@ class AppBar extends HTMLElement {
     this.innerHTML = `
       <header class="app-bar">
       <div class="app-bar__menu">
-        <button id="hamburgerButton">☰</button>
+        <button id="hamburgerButton" aria-label="menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
       </div>
       <div class="app-bar__brand">
         <h1>Warung Sangu</h1>
