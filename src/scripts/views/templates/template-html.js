@@ -7,7 +7,7 @@ const restaurantItemTemplate = (restaurant, index, lastIndex) => {
   <div class="card ${firstBox(index) ? 'box-ganjil' : ''}">
     <a href="#/detail/${restaurant.id}">
       <div class="img-container">
-        <img class="img-resto-home" alt="image ${restaurant.name}" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" crossorigin="anonymous"/>
+        <img class="img-resto-home lazyload" alt="image ${restaurant.name}" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" crossorigin="anonymous"/>
         <span class="card-title"><p>${restaurant.name} - ${restaurant.city}</p></span>
         <span class="card-rating">
           <i title="ratings" class="fa fa-star"></i>
@@ -27,7 +27,7 @@ const restaurantDetailTemplate = (detail) => `
   <div class="detail">
     <div>
       <div>
-        <img class="img-res-detail" alt="image ${detail.name}" src="${
+        <img class="img-res-detail lazyload" alt="image ${detail.name}" src="${
   CONFIG.BASE_IMAGE_URL + detail.pictureId
 }" crossorigin="anonymous"/>
       </div>
@@ -97,13 +97,13 @@ const restaurantDetailTemplate = (detail) => `
 `;
 
 const createLikeButtonTemplate = () => `
-  <button aria-label="like this resto" id="likeButton" class="like">
+  <button aria-label="like this restaurant" id="likeButton" class="like">
      <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;
 
 const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this resto" id="likeButton" class="like">
+  <button aria-label="unlike this restaurant" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;

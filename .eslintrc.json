@@ -13,6 +13,8 @@
     },
     "rules": {
         "no-console": "off",
-        "no-restricted-globals": ["error", "event", "fdescribe"]
+        "no-restricted-globals": ["error", "event", "fdescribe"],
+        "consistent-return": "off",
+        "no-prototype-builtins":"off"
     }    
 }

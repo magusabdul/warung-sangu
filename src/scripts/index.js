@@ -6,6 +6,8 @@ import '../styles/spinner.css';
 import './components/app-bar';
 import './components/hero-app';
 import './components/footer-app';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import App from './views/app';
 import swRegister from './utils/sw-register';
 import WebSocketInitiator from './utils/websocket-initiator';

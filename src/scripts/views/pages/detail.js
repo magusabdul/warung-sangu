@@ -1,7 +1,7 @@
 import RestoDbSource from '../../data/restodb-source';
 import UrlParser from '../../routes/url-parser';
 import { restaurantDetailTemplate } from '../templates/template-html';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
 import PostReview from '../../utils/post-review';
 import Spinner from '../templates/spinner-html';
 import FavoriteRestoIdb from '../../data/favorite-resto-idb';
@@ -46,7 +46,7 @@ const Detail = {
       const data = await RestoDbSource.detailResto(url.id);
       detailContainer.innerHTML += restaurantDetailTemplate(data.restaurant);
 
-      await LikeButtonInitiator.init({
+      await LikeButtonPresenter.init({
         likeButtonContainer: document.querySelector('#likeButtonContainer'),
         favoriteRestaurant: FavoriteRestoIdb,
         data,
