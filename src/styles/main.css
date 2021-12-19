@@ -40,14 +40,24 @@ body {
 .hero {
   display: flex;
   flex-direction: column;
-  height: 700px;
+  min-height: 500px;
   width: 100%;
   text-align: center;
-  background: var(--image-color), url("../public/images/heros/hero-image_1.jpg");
+  background-image: var(--image-color), url("../public/images/heros/hero-image_1-small.jpg");
   background-position: center;
   background-color: var(--primary-color);
   object-fit: cover;
+  padding: 0 10%;
 }
+@media
+  (min-width: 375px) and (max-width: 400px),
+  (min-width: 468px),
+  (-webkit-min-device-pixel-ratio: 2), 
+  (min-resolution: 192dpi) {
+    .hero {
+      background-image: var(--image-color), url("../public/images/heros/hero-image_1-large.jpg");
+    }
+  }
 
 .hero__inner {
   align-self: center;
@@ -95,7 +105,7 @@ body {
 .app-bar .app-bar__menu button {
   background-color: transparent;
   border: none;
-  font-size: 32px;
+  font-size: 48px;
   padding: 8px;
   cursor: pointer;
   color: var(--primary-color);
@@ -226,7 +236,7 @@ main {
   border-top-right-radius: 1em;
 }
 
-.img-container:hover .img-res {
+.img-container:hover .img-resto-home {
   transform: scale(1.1);
 }
 

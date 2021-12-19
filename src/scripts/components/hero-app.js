@@ -5,7 +5,7 @@ class HeroApp extends HTMLElement {
 
   render() {
     this.innerHTML = `
-            <div class="hero">
+            <div class="hero">            
                 <div tabindex="0" class="hero__inner">
                     <h1 class="hero__title">Warung Sangu</h1>
                     <p class="hero__tagline">

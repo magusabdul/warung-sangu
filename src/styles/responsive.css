@@ -32,10 +32,10 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
-  }
+  }  
 }
 
-@media screen and (min-width: 650px) {
+@media only screen and (min-width: 768px) {
   .app-bar {
     grid-template-columns: 1fr auto;
     padding: 8px 32px;
@@ -69,9 +69,6 @@
     color: var(--btn-hover);
     border-bottom: 1px solid var(--btn-hover);
   }
-}
-
-@media only screen and (min-width: 768px) {
   .detail {
     grid-template-columns: 1.1fr 1fr;
     justify-content: xx-center;

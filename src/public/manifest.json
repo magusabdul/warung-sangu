@@ -1,6 +1,6 @@
 {
     "name": "Warung Sangu",
-    "short_name": "WA",
+    "short_name": "WS",
     "description": "Free Catalogue Restaurant for you",
     "start_url": "/index.html",
     "display": "standalone",

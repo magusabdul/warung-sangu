@@ -7,7 +7,10 @@ const restaurantItemTemplate = (restaurant, index, lastIndex) => {
   <div class="card ${firstBox(index) ? 'box-ganjil' : ''}">
     <a href="#/detail/${restaurant.id}">
       <div class="img-container">
-        <img class="img-resto-home lazyload" alt="image ${restaurant.name}" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" crossorigin="anonymous"/>
+        <picture>
+          <source media="(max-width: 600px)" alt="image ${restaurant.name}" data-src="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}" crossorigin="anonymous">
+          <img class="img-resto-home lazyload" alt="image ${restaurant.name}" data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" crossorigin="anonymous"/>
+        </picture>
         <span class="card-title"><p>${restaurant.name} - ${restaurant.city}</p></span>
         <span class="card-rating">
           <i title="ratings" class="fa fa-star"></i>
@@ -27,9 +30,10 @@ const restaurantDetailTemplate = (detail) => `
   <div class="detail">
     <div>
       <div>
-        <img class="img-res-detail lazyload" alt="image ${detail.name}" src="${
-  CONFIG.BASE_IMAGE_URL + detail.pictureId
-}" crossorigin="anonymous"/>
+        <picture>
+          <source media="(max-width: 600px)" alt="image ${detail.name}" data-src="${CONFIG.BASE_IMAGE_URL_SMALL + detail.pictureId}" srcset="${CONFIG.BASE_IMAGE_URL_SMALL + detail.pictureId}" crossorigin="anonymous">
+          <img class="img-res-detail lazyload" alt="image ${detail.name}" data-src="${CONFIG.BASE_IMAGE_URL + detail.pictureId}" srcset="${CONFIG.BASE_IMAGE_URL + detail.pictureId}" crossorigin="anonymous"/>
+        </picture>
       </div>
     </div>
     <ul class="detail-info">

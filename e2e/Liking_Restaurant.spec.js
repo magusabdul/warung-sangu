@@ -82,7 +82,7 @@ Scenario('Customer review', async ({ I }) => {
 
   I.seeElement('.form-review form');
 
-  const textReview = 'E2E testing';
+  const textReview = 'Lapar banget dongg';
   I.fillField('inputName', 'Gus Abdul');
   I.fillField('inputReview', textReview);
 
