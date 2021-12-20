@@ -15,6 +15,7 @@
         "no-console": "off",
         "no-restricted-globals": ["error", "event", "fdescribe"],
         "consistent-return": "off",
-        "no-prototype-builtins":"off"
+        "no-prototype-builtins":"off",
+        "no-underscore-dangle":"off"
     }    
 }
